@@ -3,4 +3,4 @@ import PartidaController from "./controllers/partidasController.ts";
 
 // EstatisticasController.cadastrarEstatisticas()
 
-PartidaController.cadastrarPartidas()
+// PartidaController.cadastrarPartidas()

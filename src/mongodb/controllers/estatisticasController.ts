@@ -235,11 +235,86 @@ export default class EstatisticasController{
                     gols: 1,
                     foto: "",
                 },
-
-
-  
             ],
             cartoes_amarelos:[
+                {
+                    nome: "C. Henrique",
+                    time: "1º INFOR",
+                    cartoes: 2,
+                    foto: "",
+                },
+                {
+                    nome: "Edson",
+                    time: "2º AGRO",
+                    cartoes: 2,
+                    foto: "",
+                },
+                {
+                    nome: "Marcelo",
+                    time: "ADM",
+                    cartoes: 2,
+                    foto: "",
+                },
+                {
+                    nome: "Alan",
+                    time: "1º AGRO",
+                    cartoes: 2,
+                    foto: "",
+                },
+                {
+                    nome: "Jeferson",
+                    time: "3º EDIF",
+                    cartoes: 1,
+                    foto: "",
+                },
+                {
+                    nome: "J. Guilherme",
+                    time: "ADM",
+                    cartoes: 1,
+                    foto: "",
+                },
+                {
+                    nome: "Diogo",
+                    time: "1º EDIF",
+                    cartoes: 1,
+                    foto: "",
+                },
+                {
+                    nome: "Fred",
+                    time: "1º INFOR",
+                    cartoes: 1,
+                    foto: "",
+                },
+                {
+                    nome: "Pedro",
+                    time: "3º AGRO",
+                    cartoes: 1,
+                    foto: "",
+                },
+                {
+                    nome: "Wesley",
+                    time: "2º AGRO",
+                    cartoes: 1,
+                    foto: "",
+                },
+                {
+                    nome: "Stuart",
+                    time: "1º EDIF",
+                    cartoes: 1,
+                    foto: "",
+                },
+                {
+                    nome: "Kauã",
+                    time: "1º AGRO",
+                    cartoes: 1,
+                    foto: "",
+                },
+                {
+                    nome: "Luis Augusto",
+                    time: "3º INFOR",
+                    cartoes: 1,
+                    foto: "",
+                },
             ],
             cartoes_vermelhos:[
             ]
