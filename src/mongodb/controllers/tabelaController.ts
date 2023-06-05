@@ -6,7 +6,7 @@ export default class TabelaController{
   
     static async buscarTabelaAno(ano:Number):Promise<Tabela>{
         const tabelaBD = await tabela();
-        const resultado = await tabelaBD.findOne({ temporada:ano })
+        const resultado = tabelaBD.findOne({ temporada:ano })
         return resultado
     }
     
