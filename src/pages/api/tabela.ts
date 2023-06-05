@@ -3,10 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import TabelaService from '@/core/tabela/TabelaService';
 var axios = require('axios');
 
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+
 
   var data = JSON.stringify({
     "collection": "tabelas",
@@ -28,7 +30,10 @@ export default async function handler(
 
   axios(config)
     .then(function (response: any) {
+      res.setHeader("Access-Control-Allow-Headers", "*")
+      res.setHeader("Access-Control-Allow-Origin", "*")
       res.status(200).json(response.data.document)
+      
     })
     .catch(function (error: any) {
       console.log(error);
