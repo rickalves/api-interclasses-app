@@ -1,10 +1,9 @@
-import TabelaController from "../../mongodb/controllers/tabelaController";
 import Time from "./Time";
+import Tabela from "./Tabela";
 export default class TabelaService {
     
-  static async carregaTabelaAno(ano:number) {
-      const tabelaDB = await TabelaController.buscarTabelaAno(ano)
-      const tabelaCompleta = tabelaDB.times.map(time => {
+  static carregaTabela(tabela:Tabela) {
+      const tabelaCompleta = tabela.times.map(time => {
         return {
           time: time.time,
           p: (time.v * 3 + time.e - time.pn),

@@ -32,7 +32,8 @@ export default async function handler(
     .then(function (response: any) {
       res.setHeader("Access-Control-Allow-Headers", "*")
       res.setHeader("Access-Control-Allow-Origin", "*")
-      res.status(200).json(response.data.document)
+      const tabelaCompleta = TabelaService.carregaTabela(response.data.document)
+      res.status(200).json(tabelaCompleta)
       
     })
     .catch(function (error: any) {
