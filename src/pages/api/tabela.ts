@@ -1,19 +1,23 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { GetServerSideProps, NextApiRequest, NextApiResponse } from 'next'
-import TabelaService from '@/core/tabela/TabelaService'
-import { useState } from 'react'
-import Time from '@/core/tabela/Time'
-import { connect, Schema } from 'mongoose'
-
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
 
+  async function getData() {
+    const res = await fetch('https://api.github.com/users/rickalves');
+    
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+   
+    return res.json();
+  }
 
-  res.status(200).json({
-    tabela:"TabelaJogos"
-  })
+  const dados = await getData()
+
+  res.status(200).json(dados)
 
 }
