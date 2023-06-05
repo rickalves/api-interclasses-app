@@ -1,5 +1,4 @@
 import estatisticas from "../model/Estatisticas"
-import { Cartoes, Estatisticas, Gols } from "../../core/estatisticas/Estatisticas"
 
 export default class EstatisticasController{
 
