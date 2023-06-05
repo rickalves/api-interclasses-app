@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import DBConnect from "../config/DBConnect";
 
 const golsSchema = new mongoose.Schema(
     {
@@ -30,7 +31,12 @@ const estatisticasSchema = new mongoose.Schema(
     }
 )
 
-const estatisticas = mongoose.models.Estatistica || mongoose.model("Estatistica", estatisticasSchema);
+
+async function criaEstatistica(){
+    const conn = await DBConnect.conectar()
+    return conn.models?.Estatistica || conn.model("Estatistica", estatisticasSchema)
+}
 
 
-export default estatisticas;
+
+export default criaEstatistica;
