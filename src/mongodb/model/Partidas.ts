@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import DBConnect from "../config/DBConnect";
 
 
 const partidaSchema = new mongoose.Schema(
@@ -24,7 +25,10 @@ const partidasSchema = new mongoose.Schema(
     }
 )
 
-const partidas = mongoose.models.Partidas || mongoose.model("Partidas", partidasSchema);
+async function criaPartidas(){
+    const conn = await DBConnect.conectar()
+    return conn.models?.Partidas || conn.model("Partidas", partidasSchema)
+}
 
 
-export default partidas;
+export default criaPartidas;
