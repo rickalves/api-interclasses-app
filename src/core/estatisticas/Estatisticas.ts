@@ -1,8 +1,9 @@
 export interface Estatisticas{
     _id?:any;
     temporada:string;
-    gols:[]
-
+    gols:[],
+    cartoes_amarelos:[],
+    cartoes_vermelhos:[],
 }
 
 export interface Gols{

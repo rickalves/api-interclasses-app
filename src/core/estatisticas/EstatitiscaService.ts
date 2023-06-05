@@ -1,16 +1,46 @@
+import { Cartoes, Gols, Estatisticas } from "./Estatisticas"
+
 export default class EstatisticaService {
     
-    static async gols() {
-        // const golsOrdenado = estatistica.gols.sort((a, b) => {
-        //     if (a.gols < b.gols) {
-        //         return 1;
-        //     }
-        //     if (a.gols > b.gols) {
-        //         return -1;
-        //     }
-        //     return 0;
-        // })
+    static gols(estatisticas:Estatisticas) {
+        const golsOrdenado = estatisticas.gols.sort((a:Gols, b:Gols) => {
+            if (a.gols < b.gols) {
+                return 1;
+            }
+            if (a.gols > b.gols) {
+                return -1;
+            }
+            return 0;
+        })
 
-        // return golsOrdenado;
+        return golsOrdenado;
+    }
+
+    static cartoesAmarelos(estatisticas:Estatisticas) {
+        const cartoesOrdenado = estatisticas.gols.sort((a:Cartoes, b:Cartoes) => {
+            if (a.cartoes < b.cartoes) {
+                return 1;
+            }
+            if (a.cartoes > b.cartoes) {
+                return -1;
+            }
+            return 0;
+        })
+
+        return cartoesOrdenado;
+    }
+
+    static cartoesVermelhos(estatisticas:Estatisticas) {
+        const cartoesOrdenado = estatisticas.gols.sort((a:Cartoes, b:Cartoes) => {
+            if (a.cartoes < b.cartoes) {
+                return 1;
+            }
+            if (a.cartoes > b.cartoes) {
+                return -1;
+            }
+            return 0;
+        })
+
+        return cartoesOrdenado;
     }
 }
