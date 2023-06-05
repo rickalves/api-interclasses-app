@@ -12,6 +12,7 @@ export default async function handler(
     "collection": "tabelas",
     "database": "competicao",
     "dataSource": "Cluster0",
+    "filter": {"temporada": 2023}
   });
 
   var config = {
@@ -20,14 +21,14 @@ export default async function handler(
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Request-Headers': '*',
-      'api-key': 'YVjXYwVXCMrQUgWzW9YcLl4uL6n9e24LN3Rqqr1zMnlCciZCspxit1QF2A5tE341',
+      'api-key': process.env.API_KEY,
     },
     data: data
   };
 
   axios(config)
     .then(function (response: any) {
-      res.status(200).json(response.data)
+      res.status(200).json(response.data.document)
     })
     .catch(function (error: any) {
       console.log(error);
