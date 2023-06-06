@@ -1,4 +1,6 @@
-import DBConnect from "./config/DBConnect.ts";
 import EstatisticasController from "./controllers/estatisticasController.ts";
+import PartidaController from "./controllers/partidasController.ts";
 
-EstatisticasController.cadastrarEstatisticas()
+// EstatisticasController.cadastrarEstatisticas()
+
+// PartidaController.cadastrarPartidas()
