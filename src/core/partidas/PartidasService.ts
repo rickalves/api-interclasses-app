@@ -2,8 +2,8 @@ import Partidas from "./Partidas";
 import Rodada from "./Rodada";
 export default class PartidaService {
     
-    static carregaPartidas(partidas:Partidas) {
-        const partidasOrdenadas = partidas.rodadas.map(rodada => rodada.sort((a:Rodada, b:Rodada) => {
+    static carregaPartidasGrupos(partidas:Partidas) {
+        const partidasOrdenadas = partidas.rodadas.grupos.map(rodada => rodada.sort((a:Rodada, b:Rodada) => {
             if (a.data > b.data) {
                 return 1;
             }

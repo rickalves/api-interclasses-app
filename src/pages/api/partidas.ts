@@ -34,9 +34,13 @@ export default function handler(
             const partidasCompleta ={
                 _id:response.data.document._id,
                 temporada:response.data.document.temporada,
-                rodadas:PartidaService.carregaPartidas(response.data.document)
+                rodadas:{
+                    grupos:PartidaService.carregaPartidasGrupos(response.data.document),
+                    finais:response.data.document.rodadas.finais
+                }
             } 
             res.status(200).json(partidasCompleta)
+            // res.status(200).json(response.data.document)
         })
         .catch(function (error: any) {
             console.log(error);
