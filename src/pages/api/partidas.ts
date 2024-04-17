@@ -13,7 +13,7 @@ export default function handler(
         "collection": "partidas",
         "database": "competicao",
         "dataSource": "Cluster0",
-        "filter": { "temporada": 2023 }
+        "filter": { "temporada": 2024 }
     });
 
     var config = {
